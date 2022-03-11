@@ -2,6 +2,7 @@
 blue : #0065FC
 light blue : #DEEBFF
 grey : #F2F2F2
+box-shadow: 0px 0px 9px 3px #cecece;
 */
 
 /*basic setting*/
@@ -10,7 +11,6 @@ grey : #F2F2F2
   padding: 0;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  background-color: #f2f2f2;
 }
 
 p {
@@ -69,14 +69,14 @@ nav div:hover {
 }
 
 .fa-location-dot {
-  background-color: lightgray;
+  background-color: #f2f2f2;
   padding: 15px;
   border-radius: 10px 0 0 10px;
   font-size: 18px;
 }
 
 input {
-  border: 1px solid lightgray;
+  border: 1px solid #f2f2f2;
   padding-left: 10px;
   border-right: none;
 }
@@ -124,7 +124,7 @@ button {
 }
 
 .filter-ele p {
-  border: 1.8px lightgray solid;
+  border: 1.8px #f2f2f2 solid;
   margin: auto;
   padding: 13px 25px;
   border-radius: 0 50px 50px 0;
@@ -143,12 +143,84 @@ button {
 
 .info i {
   color: #0065fc;
-  border: 1px lightgray solid;
-  padding: 5px 9px;
-  font-size: 12px;
+  border: 1px #f2f2f2 solid;
+  padding: 5px 10px;
   border-radius: 50%;
 }
 
 .info p {
   margin-left: 10px;
+}
+
+/*all rooms cart*/
+.all-rooms {
+  display: flex;
+  width: 100%;
+}
+/*marseille rooms card*/
+.marseille-rooms {
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  padding: 40px;
+  width: 65%;
+}
+
+.marseille-rooms h2 {
+  margin-bottom: 30px;
+}
+
+.marseille-card-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.marseille-card-box a {
+  min-width: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0px 0px 9px 3px #cecece;
+}
+
+.marseille-room-card img {
+  object-fit: cover;
+  display: inline-block;
+  height: 150px;
+  width: 100%;
+  min-width: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+.marseille-room-nama-price-rate {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 10px auto 10px 5px;
+}
+
+.marseille-room-nama-price-rate p span {
+  font-weight: 500;
+}
+
+.rate {
+  color: #0065fc;
+}
+
+.rate-no-color {
+  color: #f2f2f2;
+}
+
+.affiche-link {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
 }
