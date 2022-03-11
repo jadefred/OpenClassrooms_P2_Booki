@@ -13,6 +13,10 @@ grey : #F2F2F2
   background-color: #f2f2f2;
 }
 
+p {
+  font-size: 16px;
+}
+
 body {
   width: 90%;
   margin: auto;
@@ -32,7 +36,8 @@ header {
 }
 
 header img {
-  transform: scale(0.6);
+  height: 60px;
+  margin: auto auto auto 0;
 }
 
 nav {
@@ -50,4 +55,100 @@ nav div {
 nav div:hover {
   border-top: #0065fc 2px solid;
   color: #0065fc;
+}
+
+/* title, search and filter */
+.title-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.fa-location-dot {
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 10px 0 0 10px;
+  font-size: 18px;
+}
+
+input {
+  border: 1px solid lightgray;
+  padding-left: 10px;
+  border-right: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #0065fc;
+  color: white;
+  font-weight: 600;
+  padding: 0 15px;
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.filter p {
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-ele {
+  display: flex;
+}
+
+.filter-ele i {
+  background-color: #deebff;
+  color: #0065fc;
+  font-size: 18px;
+  margin: auto;
+  padding: 15px 17px;
+  border-radius: 50px;
+  position: relative;
+  left: 20px;
+}
+
+.filter-ele p {
+  border: 1.8px lightgray solid;
+  margin: auto;
+  padding: 13px 25px;
+  border-radius: 0 50px 50px 0;
+  font-weight: 600;
+}
+
+.filter-ele p:hover {
+  color: #0065fc;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info i {
+  color: #0065fc;
+  border: 1px lightgray solid;
+  padding: 5px 9px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.info p {
+  margin-left: 10px;
 }
