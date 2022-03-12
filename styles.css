@@ -96,6 +96,10 @@ button {
   font-size: 16px;
 }
 
+.button-icon {
+  display: none;
+}
+
 .filter {
   display: flex;
   align-items: center;
@@ -108,7 +112,8 @@ button {
 
 .filter-bar {
   display: flex;
-  column-gap: 30px;
+  column-gap: 10px;
+  row-gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -123,8 +128,6 @@ button {
   margin: auto;
   padding: 15px 17px;
   border-radius: 50px;
-  position: relative;
-  left: 20px;
 }
 
 .filter-ele p {
@@ -133,6 +136,9 @@ button {
   padding: 13px 25px;
   border-radius: 0 50px 50px 0;
   font-weight: 600;
+  position: relative;
+  right: 20px;
+  z-index: -1;
 }
 
 .filter-ele p:hover {
@@ -167,7 +173,7 @@ button {
 .marseille-rooms {
   border-radius: 30px;
   background-color: #f2f2f2;
-  padding: 40px;
+  padding: 30px;
   width: 65%;
 }
 
@@ -217,12 +223,17 @@ button {
   margin: 10px auto 10px 5px;
 }
 
+.marseille-room-nama-price-rate h3 {
+  font-size: 17px;
+}
+
 .marseille-room-nama-price-rate p span {
   font-weight: 500;
 }
 
 .rate {
   color: #0065fc;
+  font-size: 13px;
 }
 
 .rate-no-color {
@@ -239,7 +250,7 @@ button {
 .popular-rooms {
   border-radius: 30px;
   background-color: #f2f2f2;
-  padding: 40px;
+  padding: 30px;
   width: 32%;
 }
 
@@ -269,7 +280,7 @@ button {
   display: flex;
   background-color: white;
   width: 100%;
-  height: 130px;
+  height: 150px;
   padding: 5px;
   border-radius: 20px;
   box-shadow: 0px 0px 9px 3px #cecece;
@@ -289,10 +300,13 @@ button {
 
 .popular-room-nama-price-rate {
   display: flex;
-  gap: 7px;
   flex-direction: column;
   justify-content: space-between;
   margin: 5px 0 5px 10px;
+}
+
+.popular-room-nama-price-rate h3 {
+  font-size: 17px;
 }
 
 .popular-room-nama-price-rate p span {
@@ -304,10 +318,9 @@ button {
   margin-top: 30px;
   display: grid;
   max-width: 100%;
-  max-height: 400px;
   grid-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
   grid-template-areas:
     "img-1 img-2 img-4 img-5"
     "img-1 img-3 img-4 img-6";
@@ -380,4 +393,133 @@ footer {
 .footer-individual-list li {
   list-style: none;
   margin-top: 18px;
+}
+
+/*media query*/
+/*tablettes*/
+@media only screen and (max-width: 992px) {
+  .all-rooms {
+    flex-direction: column-reverse;
+  }
+  .marseille-rooms {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .popular-rooms {
+    width: 100%;
+  }
+  .activities-box {
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+    grid-template-areas:
+      "img-1 img-2 img-3"
+      "img-4 img-5 img-6";
+  }
+}
+
+/*portables*/
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 150px;
+    flex-direction: column;
+  }
+  header img {
+    margin: auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav div {
+    margin-bottom: 30px;
+    border-bottom: #f2f2f2 2px solid;
+  }
+
+  nav div:hover {
+    border-top: none;
+    border-bottom: #0065fc 2px solid;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  /*title, search and filter*/
+  .title-box {
+    width: 95%;
+    margin: auto;
+  }
+  .title-box h1,
+  .title-box p {
+    text-align: center;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .button-icon {
+    display: block;
+  }
+
+  .search-bar {
+    margin: auto;
+  }
+  .filter {
+    margin: auto;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+  }
+  .info {
+    justify-content: center;
+  }
+  /*rooms*/
+  .marseille-rooms {
+    width: 100%;
+    background-color: white;
+    padding: 0 10px;
+  }
+  .marseille-card-box a:hover {
+    transform: scale(1);
+  }
+  .marseille-room-nama-price-rate {
+    gap: 3px;
+  }
+  .popular-rooms {
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    padding: 30px 10px;
+    width: 100%;
+  }
+  .popular-room-card:hover {
+    transform: scale(1);
+  }
+  .activities {
+    width: 95%;
+    margin: auto;
+  }
+  .activities-box {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas:
+      "img-1"
+      "img-2"
+      "img-3"
+      "img-4"
+      "img-5"
+      "img-6";
+  }
+
+  .activities-box a:hover {
+    transform: scale(1);
+  }
+  .footer-lists {
+    width: 90%;
+    flex-direction: column;
+    row-gap: 50px;
+  }
 }
