@@ -411,7 +411,7 @@ footer {
   .activities-box {
     grid-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1;
+    grid-template-rows: repeat(2, 200px);
     grid-template-areas:
       "img-1 img-2 img-3"
       "img-4 img-5 img-6";
