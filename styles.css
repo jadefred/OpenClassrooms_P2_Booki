@@ -2,6 +2,7 @@
 blue : #0065FC
 light blue : #DEEBFF
 grey : #F2F2F2
+dark-grey : #d6d6d6
 box-shadow: 0px 0px 9px 3px #cecece;
 */
 
@@ -73,14 +74,14 @@ main {
 }
 
 .fa-location-dot {
-  background-color: #f2f2f2;
+  background-color: #d9d9d9;
   padding: 15px;
   border-radius: 10px 0 0 10px;
   font-size: 18px;
 }
 
 input {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #d9d9d9;
   padding-left: 10px;
   border-right: none;
 }
@@ -131,7 +132,7 @@ button {
 }
 
 .filter-ele p {
-  border: 1.8px #f2f2f2 solid;
+  border: 1.5px #c9c9c9 solid;
   margin: auto;
   padding: 13px 25px;
   border-radius: 0 50px 50px 0;
@@ -141,7 +142,7 @@ button {
   z-index: -1;
 }
 
-.filter-ele p:hover {
+.filter-ele:hover {
   color: #0065fc;
   cursor: pointer;
 }
@@ -237,7 +238,7 @@ button {
 }
 
 .rate-no-color {
-  color: #f2f2f2;
+  color: #c9c9c9;
 }
 
 .affiche-link {
